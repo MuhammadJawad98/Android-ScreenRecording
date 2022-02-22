@@ -77,8 +77,10 @@ public class MainActivity extends AppCompatActivity {
         screenDensity = metrics.densityDpi;
         mediaRecorder = new MediaRecorder();
         mediaProjectionManager = (MediaProjectionManager) getSystemService(Context.MEDIA_PROJECTION_SERVICE);
-
+//ScreenRecordingHelper helper=new ScreenRecordingHelper(metrics,mediaProjectionManager,getApplicationContext());
         toggleButton.setOnClickListener(v -> {
+//            ScreenRecordingHelper helper = new ScreenRecordingHelper(this,getApplicationContext(), toggleButton, findViewById(R.id.content));
+//            helper.callScreenRecordMethod(findViewById(R.id.content));
             if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) +
                     ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
 
@@ -97,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                     }, REQUEST_PERMISSION);
                 }
             } else {
-                onShareScreen(v);
+               onShareScreen(v);
             }
         });
     }
