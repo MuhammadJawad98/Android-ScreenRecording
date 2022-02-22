@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RecordingAppAndroid</string>
+    <string name="permission_text">permission_text</string>
+</resources>
